@@ -1,7 +1,16 @@
 #include <iostream>
+#include <fstream>
+#include <sstream>
+#include <cassert>
+#include "day1.hpp"
+
+static constexpr std::string_view FILE_PREFIX = "../../source/";
 
 int main() {
-	std::cout << "miku says hi" << std::endl;
+	std::ifstream fin(std::string(FILE_PREFIX) + "day1/input.txt");
+	std::stringstream buffer;
+	buffer << fin.rdbuf();
+	solve1(buffer.str());
 
 	return 0;
 }
