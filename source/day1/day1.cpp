@@ -15,8 +15,9 @@ after each line, take the sum of all the numbers formed
 #include <utility>
 #include <cassert>
 #include <stdio.h>
+#include "day1.hpp"
 
-void solve1(std::string input)
+void Day1::solve1(std::string input)
 {
 	std::vector<std::string> tokens;
 	
@@ -71,7 +72,11 @@ static const std::unordered_map<std::string, int> table = {
 
 using IteratorAndIntegerPairType = std::pair<int, int>;
 
-void solve2(std::string input)
+/*
+same premise but now the number word string is also considerd, so something like asasdone8asdtwoas3ld will be 13
+*/
+
+void Day1::solve2(std::string input)
 {
 	/*
 	auto lookupTable = [](std::string _input) 
