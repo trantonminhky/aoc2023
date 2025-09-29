@@ -12,7 +12,7 @@ int main()
 	std::ifstream fin(std::string(FILE_PREFIX) + std::string(DAY) + "/input.txt");
 	std::stringstream buffer;
 	buffer << fin.rdbuf();
-	Day2::solve1(buffer.str()); // change function name for first part solution and second part solution
+	Day2::solve2(buffer.str()); // change function name for first part solution and second part solution
 
 	return 0;
 }
