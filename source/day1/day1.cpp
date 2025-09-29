@@ -16,28 +16,11 @@ after each line, take the sum of all the numbers formed
 #include <cassert>
 #include <stdio.h>
 #include "day1.hpp"
+#include "helper.hpp"
 
 void Day1::solve1(std::string input)
 {
-	std::vector<std::string> tokens;
-	
-	// split input into
-	{
-		std::string delim = "\n";
-		size_t pos;
-
-		while (pos != input.npos)
-		{
-			pos = input.find(delim);
-
-			auto token = input.substr(0, pos); // pos = 5
-			tokens.push_back(token);
-			input.erase(0, pos + delim.length());
-		}
-		
-		for (const auto& s : tokens)
-			std::cout << s << "\n";
-	}
+	std::vector<std::string> tokens = split(input, "\n");
 
 	auto sum = 0;
 
@@ -102,24 +85,7 @@ void Day1::solve2(std::string input)
 	};
 	*/
 
-	std::vector<std::string> tokens;
-	// split input into
-	{
-		std::string delim = "\n";
-		size_t pos;
-
-		while (pos != input.npos)
-		{
-			pos = input.find(delim);
-
-			auto token = input.substr(0, pos); // pos = 5
-			tokens.push_back(token);
-			input.erase(0, pos + delim.length());
-		}
-		
-		// for (const auto& s : tokens)
-			// std::cout << s << "\n";
-	}
+	std::vector<std::string> tokens = split(input, "\n");
 	
 	auto sum = 0;
 	{
