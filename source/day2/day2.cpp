@@ -113,6 +113,10 @@ void Day2::solve1(std::string input)
 	printf("result: %d\n", sum);
 }
 
+/*
+find the lowest number of cubes for a game to be playable, the power of a game is the product of those cube count. calculate the sum
+*/
+
 void Day2::solve2(std::string input)
 {
 	auto tokens = split(input, "\n");
